@@ -18,7 +18,7 @@ const Interest: React.FC<InterestProps> = ({id}) => {
 
     const sendRequest = (e:any) => {
         
-            axios.put('/api/v1/new-interest', {id}).then(response => {
+            axios.put('/new-interest', {id}).then(response => {
                 setIntNumber(response.data.int_total)
             })
             var d = new Date();
@@ -32,7 +32,7 @@ const Interest: React.FC<InterestProps> = ({id}) => {
 
     useEffect(() => {
         console.log(id)
-        axios.get('/api/v1/int-number', {params:{
+        axios.get('/int-number', {params:{
             id
         }}).then(response => {
             setIntNumber(response.data.int_total)

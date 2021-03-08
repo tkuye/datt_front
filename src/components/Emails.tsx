@@ -17,7 +17,7 @@ const Emails: React.FC<EmailsProps> = ({}) => {
                 return
                 }
                 
-                axios.post('/api/v1/email', {
+                axios.post('/email', {
                         email: inputEl.current.value
                 }).then(() => {
                 inputEl.current.value = ""

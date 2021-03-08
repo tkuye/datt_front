@@ -156,19 +156,19 @@ const App = () =>  {
         let isMounted = true
         let source = Axios.CancelToken.source()
         if (isMounted) {
-            axios.get('/api/v1/users').then((response) => {
+            axios.get('/users').then((response) => {
                 setUsers({status:"LOADED", users:response.data})
             })
-            axios.get('/api/v1/blogs', { cancelToken:source.token}).then((response) => {
+            axios.get('/blogs', { cancelToken:source.token}).then((response) => {
                             setBlogs({status:"LOADED", blogs:response.data})
                             
                         })
-            axios.get('/api/v1/carousel', { cancelToken:source.token}).then((res) => {
+            axios.get('/carousel', { cancelToken:source.token}).then((res) => {
                 setCarousel({status:"LOADED", images:res.data})
 
             })
 
-            axios.get('/api/v1/events', { cancelToken:source.token}).then((response) => {
+            axios.get('/events', { cancelToken:source.token}).then((response) => {
                 setEvents({status:"LOADED", events:response.data})
                 setUpcomingEvents({status:"LOADED", events:response.data.filter((event:eventI) => event.upcoming === true)})
                 if (window.location.href.includes("events")) {

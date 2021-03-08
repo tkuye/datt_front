@@ -8,7 +8,7 @@ interface EventInterestProps {
 const EventInterest: React.FC<EventInterestProps> = () => {
     const [events, setEvents] = useState([])
     const getInterest = () => {
-        axios.get('/api/v1/interest').then(response => {
+        axios.get('/interest').then(response => {
             setEvents(response.data)
         })
     }

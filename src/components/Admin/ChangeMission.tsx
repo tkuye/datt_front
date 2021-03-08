@@ -12,13 +12,13 @@ const ChangeMission: React.FC<ChangeMissionProps> = () => {
     const [mission, setMission] = useState('')
     const context = useContext(RunningContext)
     useEffect(() => {
-        axios.get('/api/v1/mission').then((response) => {
+        axios.get('/mission').then((response) => {
             setMission(response.data.name)
         })
     },[])
 
     const sendNewMission = () => {
-        axios.post('/api/v1/mission', {
+        axios.post('/mission', {
             mission
         }).then(() => {
             context.running()

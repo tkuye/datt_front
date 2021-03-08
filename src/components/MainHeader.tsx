@@ -31,7 +31,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({}) => {
                         }))
                         
                 }  
-                axios.get('/api/v1/mission').then((response) => {
+                axios.get('/mission').then((response) => {
                         setMission(response.data.name)
                         setQuote(response.data.quote.split('-')[0])
                         setPerson(response.data.quote.split('-')[1])

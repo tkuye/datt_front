@@ -11,7 +11,7 @@ const UserAdmin: React.FC<UserAdminProps> = ({getUserEdit}) => {
             
             let id = getCookie('userid')
         
-            axios.get('/api/v1/user', {
+            axios.get('/user', {
                 params:{
                     id: id
                 }

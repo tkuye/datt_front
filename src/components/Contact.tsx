@@ -27,7 +27,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
             }
             
                 
-            axios.post('/api/v1/email-request', {
+            axios.post('/email-request', {
                 from_name: name,
                 message: text,
                 reply_to: email,

@@ -56,7 +56,7 @@ const EditType:React.FC<EditTypeProps> = ({title, id, date, type, html, img, ifr
         
 
         
-        axios.post('/api/v1/edit', {
+        axios.post('/edit', {
             title:titleChange, 
             iframe:iframeForm !== ""?iframeForm.split("?")[0] + "?embedded=true":"",
             date:dateChange,
@@ -96,7 +96,7 @@ const EditType:React.FC<EditTypeProps> = ({title, id, date, type, html, img, ifr
     }
 
       const deletePost = () => {
-        axios.delete('/api/v1/post', {
+        axios.delete('/post', {
             params:{
                 id:id, 
                 type:type,
