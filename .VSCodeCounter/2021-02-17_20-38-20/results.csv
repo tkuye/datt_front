@@ -1,0 +1,50 @@
+"filename", "language", "Markdown", "JSON", "TypeScript React", "TypeScript", "CSS", "HTML", "comment", "blank", "total"
+"/home/tosin/Desktop/datt/README.md", "Markdown", 26, 0, 0, 0, 0, 0, 0, 21, 47
+"/home/tosin/Desktop/datt/package-lock.json", "JSON", 0, 17028, 0, 0, 0, 0, 0, 1, 17029
+"/home/tosin/Desktop/datt/package.json", "JSON", 0, 58, 0, 0, 0, 0, 0, 1, 59
+"/home/tosin/Desktop/datt/public/index.html", "HTML", 0, 0, 0, 0, 0, 23, 23, 1, 47
+"/home/tosin/Desktop/datt/public/manifest.json", "JSON", 0, 25, 0, 0, 0, 0, 0, 1, 26
+"/home/tosin/Desktop/datt/src/App.tsx", "TypeScript React", 0, 0, 159, 0, 0, 0, 0, 35, 194
+"/home/tosin/Desktop/datt/src/axInstance.ts", "TypeScript", 0, 0, 0, 5, 0, 0, 0, 2, 7
+"/home/tosin/Desktop/datt/src/components/Admin/Admin.tsx", "TypeScript React", 0, 0, 44, 0, 0, 0, 1, 6, 51
+"/home/tosin/Desktop/datt/src/components/Admin/AdminGetter.tsx", "TypeScript React", 0, 0, 99, 0, 0, 0, 5, 27, 131
+"/home/tosin/Desktop/datt/src/components/Admin/AdminPanel.tsx", "TypeScript React", 0, 0, 78, 0, 0, 0, 1, 21, 100
+"/home/tosin/Desktop/datt/src/components/Admin/AdminPost.tsx", "TypeScript React", 0, 0, 103, 0, 0, 0, 0, 25, 128
+"/home/tosin/Desktop/datt/src/components/Admin/Authenticate.tsx", "TypeScript React", 0, 0, 60, 0, 0, 0, 0, 8, 68
+"/home/tosin/Desktop/datt/src/components/Admin/ChangeMission.tsx", "TypeScript React", 0, 0, 30, 0, 0, 0, 0, 6, 36
+"/home/tosin/Desktop/datt/src/components/Admin/EditType.tsx", "TypeScript React", 0, 0, 108, 0, 0, 0, 0, 25, 133
+"/home/tosin/Desktop/datt/src/components/Admin/EditUser.tsx", "TypeScript React", 0, 0, 171, 0, 0, 0, 0, 26, 197
+"/home/tosin/Desktop/datt/src/components/Admin/EmailListing.tsx", "TypeScript React", 0, 0, 20, 0, 0, 0, 0, 2, 22
+"/home/tosin/Desktop/datt/src/components/Admin/EventInterest.tsx", "TypeScript React", 0, 0, 22, 0, 0, 0, 0, 6, 28
+"/home/tosin/Desktop/datt/src/components/Admin/Home.tsx", "TypeScript React", 0, 0, 15, 0, 0, 0, 0, 4, 19
+"/home/tosin/Desktop/datt/src/components/Admin/Logout.tsx", "TypeScript React", 0, 0, 14, 0, 0, 0, 0, 4, 18
+"/home/tosin/Desktop/datt/src/components/Admin/NewUser.tsx", "TypeScript React", 0, 0, 121, 0, 0, 0, 0, 25, 146
+"/home/tosin/Desktop/datt/src/components/Admin/UserAdmin.tsx", "TypeScript React", 0, 0, 29, 0, 0, 0, 0, 8, 37
+"/home/tosin/Desktop/datt/src/components/Admin/UserShow.tsx", "TypeScript React", 0, 0, 14, 0, 0, 0, 0, 3, 17
+"/home/tosin/Desktop/datt/src/components/Blogs/BlogContainer.tsx", "TypeScript React", 0, 0, 41, 0, 0, 0, 1, 8, 50
+"/home/tosin/Desktop/datt/src/components/Blogs/BlogPost.tsx", "TypeScript React", 0, 0, 29, 0, 0, 0, 0, 4, 33
+"/home/tosin/Desktop/datt/src/components/Blogs/FullBlog.tsx", "TypeScript React", 0, 0, 77, 0, 0, 0, 0, 25, 102
+"/home/tosin/Desktop/datt/src/components/Carousel/Carousel.tsx", "TypeScript React", 0, 0, 167, 0, 0, 0, 4, 69, 240
+"/home/tosin/Desktop/datt/src/components/Carousel/MoreDetails.tsx", "TypeScript React", 0, 0, 14, 0, 0, 0, 0, 7, 21
+"/home/tosin/Desktop/datt/src/components/Carousel/Photos.tsx", "TypeScript React", 0, 0, 21, 0, 0, 0, 0, 7, 28
+"/home/tosin/Desktop/datt/src/components/Emails.tsx", "TypeScript React", 0, 0, 35, 0, 0, 0, 0, 4, 39
+"/home/tosin/Desktop/datt/src/components/Events/Event.tsx", "TypeScript React", 0, 0, 23, 0, 0, 0, 0, 2, 25
+"/home/tosin/Desktop/datt/src/components/Events/EventDetails.tsx", "TypeScript React", 0, 0, 11, 0, 0, 0, 0, 2, 13
+"/home/tosin/Desktop/datt/src/components/Events/EventHeader.tsx", "TypeScript React", 0, 0, 12, 0, 0, 0, 0, 2, 14
+"/home/tosin/Desktop/datt/src/components/Events/Events.tsx", "TypeScript React", 0, 0, 25, 0, 0, 0, 0, 7, 32
+"/home/tosin/Desktop/datt/src/components/Events/Interest.tsx", "TypeScript React", 0, 0, 33, 0, 0, 0, 0, 9, 42
+"/home/tosin/Desktop/datt/src/components/Events/InterestNumber.tsx", "TypeScript React", 0, 0, 12, 0, 0, 0, 0, 2, 14
+"/home/tosin/Desktop/datt/src/components/LogoHead.tsx", "TypeScript React", 0, 0, 15, 0, 0, 0, 0, 11, 26
+"/home/tosin/Desktop/datt/src/components/MainHeader.tsx", "TypeScript React", 0, 0, 19, 0, 0, 0, 0, 4, 23
+"/home/tosin/Desktop/datt/src/components/Switcher.tsx", "TypeScript React", 0, 0, 32, 0, 0, 0, 0, 11, 43
+"/home/tosin/Desktop/datt/src/components/TeamMeet.tsx", "TypeScript React", 0, 0, 10, 0, 0, 0, 0, 2, 12
+"/home/tosin/Desktop/datt/src/components/TitleHead.tsx", "TypeScript React", 0, 0, 9, 0, 0, 0, 0, 4, 13
+"/home/tosin/Desktop/datt/src/components/forceUpdate.tsx", "TypeScript React", 0, 0, 8, 0, 0, 0, 0, 1, 9
+"/home/tosin/Desktop/datt/src/components/toBase64.ts", "TypeScript", 0, 0, 0, 6, 0, 0, 0, 1, 7
+"/home/tosin/Desktop/datt/src/css/style.css", "CSS", 0, 0, 0, 0, 619, 0, 0, 121, 740
+"/home/tosin/Desktop/datt/src/custome.d.ts", "TypeScript", 0, 0, 0, 4, 0, 0, 0, 0, 4
+"/home/tosin/Desktop/datt/src/getCookie.ts", "TypeScript", 0, 0, 0, 15, 0, 0, 0, 0, 15
+"/home/tosin/Desktop/datt/src/index.tsx", "TypeScript React", 0, 0, 9, 0, 0, 0, 0, 6, 15
+"/home/tosin/Desktop/datt/src/react-app-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 1, 1, 2
+"/home/tosin/Desktop/datt/tsconfig.json", "JSON", 0, 26, 0, 0, 0, 0, 0, 1, 27
+"Total", "-", 26, 17137, 1689, 30, 619, 23, 36, 569, 20129

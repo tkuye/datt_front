@@ -1,0 +1,84 @@
+Date : 2021-02-17 05:28:19
+Directory : /home/tosin/Desktop/datt
+Total : 47 files,  19283 codes, 34 comments, 528 blanks, all 19845 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          4 |     17,114 |          0 |          4 |     17,118 |
+| TypeScript React |         35 |      1,499 |         10 |        387 |      1,896 |
+| CSS              |          1 |        591 |          0 |        111 |        702 |
+| TypeScript       |          5 |         30 |          1 |          4 |         35 |
+| Markdown         |          1 |         26 |          0 |         21 |         47 |
+| HTML             |          1 |         23 |         23 |          1 |         47 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                 |         47 |     19,283 |         34 |        528 |     19,845 |
+| public                                                            |          2 |         48 |         23 |          2 |         73 |
+| src                                                               |         41 |      2,120 |         11 |        502 |      2,633 |
+| src/components                                                    |         34 |      1,345 |         10 |        355 |      1,710 |
+| src/components/Admin                                              |         15 |        834 |          8 |        198 |      1,040 |
+| src/components/Blogs                                              |          3 |        121 |          1 |         24 |        146 |
+| src/components/Carousel                                           |          2 |        149 |          1 |         69 |        219 |
+| src/components/Events                                             |          6 |        115 |          0 |         25 |        140 |
+| src/css                                                           |          1 |        591 |          0 |        111 |        702 |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                          | language         | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/tosin/Desktop/datt/README.md                                | Markdown         |         26 |          0 |         21 |         47 |
+| /home/tosin/Desktop/datt/package-lock.json                        | JSON             |     17,006 |          0 |          1 |     17,007 |
+| /home/tosin/Desktop/datt/package.json                             | JSON             |         57 |          0 |          1 |         58 |
+| /home/tosin/Desktop/datt/public/index.html                        | HTML             |         23 |         23 |          1 |         47 |
+| /home/tosin/Desktop/datt/public/manifest.json                     | JSON             |         25 |          0 |          1 |         26 |
+| /home/tosin/Desktop/datt/src/App.tsx                              | TypeScript React |        151 |          0 |         27 |        178 |
+| /home/tosin/Desktop/datt/src/axInstance.ts                        | TypeScript       |          5 |          0 |          2 |          7 |
+| /home/tosin/Desktop/datt/src/components/Admin/Admin.tsx           | TypeScript React |         44 |          1 |          6 |         51 |
+| /home/tosin/Desktop/datt/src/components/Admin/AdminGetter.tsx     | TypeScript React |         99 |          5 |         27 |        131 |
+| /home/tosin/Desktop/datt/src/components/Admin/AdminPanel.tsx      | TypeScript React |         76 |          1 |         20 |         97 |
+| /home/tosin/Desktop/datt/src/components/Admin/AdminPost.tsx       | TypeScript React |        103 |          0 |         25 |        128 |
+| /home/tosin/Desktop/datt/src/components/Admin/Authenticate.tsx    | TypeScript React |         60 |          0 |          8 |         68 |
+| /home/tosin/Desktop/datt/src/components/Admin/ChangeMission.tsx   | TypeScript React |         30 |          0 |          6 |         36 |
+| /home/tosin/Desktop/datt/src/components/Admin/EditType.tsx        | TypeScript React |        102 |          0 |         26 |        128 |
+| /home/tosin/Desktop/datt/src/components/Admin/EditUser.tsx        | TypeScript React |         85 |          1 |         28 |        114 |
+| /home/tosin/Desktop/datt/src/components/Admin/EmailListing.tsx    | TypeScript React |         20 |          0 |          2 |         22 |
+| /home/tosin/Desktop/datt/src/components/Admin/EventInterest.tsx   | TypeScript React |         22 |          0 |          6 |         28 |
+| /home/tosin/Desktop/datt/src/components/Admin/Home.tsx            | TypeScript React |         15 |          0 |          4 |         19 |
+| /home/tosin/Desktop/datt/src/components/Admin/Logout.tsx          | TypeScript React |         14 |          0 |          4 |         18 |
+| /home/tosin/Desktop/datt/src/components/Admin/NewUser.tsx         | TypeScript React |        121 |          0 |         25 |        146 |
+| /home/tosin/Desktop/datt/src/components/Admin/UserAdmin.tsx       | TypeScript React |         29 |          0 |          8 |         37 |
+| /home/tosin/Desktop/datt/src/components/Admin/UserShow.tsx        | TypeScript React |         14 |          0 |          3 |         17 |
+| /home/tosin/Desktop/datt/src/components/Blogs/BlogContainer.tsx   | TypeScript React |         40 |          1 |          8 |         49 |
+| /home/tosin/Desktop/datt/src/components/Blogs/BlogPost.tsx        | TypeScript React |         29 |          0 |          4 |         33 |
+| /home/tosin/Desktop/datt/src/components/Blogs/FullBlog.tsx        | TypeScript React |         52 |          0 |         12 |         64 |
+| /home/tosin/Desktop/datt/src/components/Carousel/Carousel.tsx     | TypeScript React |        136 |          1 |         66 |        203 |
+| /home/tosin/Desktop/datt/src/components/Carousel/Photos.tsx       | TypeScript React |         13 |          0 |          3 |         16 |
+| /home/tosin/Desktop/datt/src/components/Emails.tsx                | TypeScript React |         32 |          0 |          4 |         36 |
+| /home/tosin/Desktop/datt/src/components/Events/Event.tsx          | TypeScript React |         23 |          0 |          2 |         25 |
+| /home/tosin/Desktop/datt/src/components/Events/EventDetails.tsx   | TypeScript React |         11 |          0 |          2 |         13 |
+| /home/tosin/Desktop/datt/src/components/Events/EventHeader.tsx    | TypeScript React |         12 |          0 |          2 |         14 |
+| /home/tosin/Desktop/datt/src/components/Events/Events.tsx         | TypeScript React |         24 |          0 |          8 |         32 |
+| /home/tosin/Desktop/datt/src/components/Events/Interest.tsx       | TypeScript React |         33 |          0 |          9 |         42 |
+| /home/tosin/Desktop/datt/src/components/Events/InterestNumber.tsx | TypeScript React |         12 |          0 |          2 |         14 |
+| /home/tosin/Desktop/datt/src/components/LogoHead.tsx              | TypeScript React |         12 |          0 |         10 |         22 |
+| /home/tosin/Desktop/datt/src/components/MainHeader.tsx            | TypeScript React |         19 |          0 |          4 |         23 |
+| /home/tosin/Desktop/datt/src/components/Switcher.tsx              | TypeScript React |         30 |          0 |         13 |         43 |
+| /home/tosin/Desktop/datt/src/components/TeamMeet.tsx              | TypeScript React |         10 |          0 |          2 |         12 |
+| /home/tosin/Desktop/datt/src/components/TitleHead.tsx             | TypeScript React |          9 |          0 |          4 |         13 |
+| /home/tosin/Desktop/datt/src/components/forceUpdate.tsx           | TypeScript React |          8 |          0 |          1 |          9 |
+| /home/tosin/Desktop/datt/src/components/toBase64.ts               | TypeScript       |          6 |          0 |          1 |          7 |
+| /home/tosin/Desktop/datt/src/css/style.css                        | CSS              |        591 |          0 |        111 |        702 |
+| /home/tosin/Desktop/datt/src/custome.d.ts                         | TypeScript       |          4 |          0 |          0 |          4 |
+| /home/tosin/Desktop/datt/src/getCookie.ts                         | TypeScript       |         15 |          0 |          0 |         15 |
+| /home/tosin/Desktop/datt/src/index.tsx                            | TypeScript React |          9 |          0 |          6 |         15 |
+| /home/tosin/Desktop/datt/src/react-app-env.d.ts                   | TypeScript       |          0 |          1 |          1 |          2 |
+| /home/tosin/Desktop/datt/tsconfig.json                            | JSON             |         26 |          0 |          1 |         27 |
+| Total                                                             |                  |     19,283 |         34 |        528 |     19,845 |
++-------------------------------------------------------------------+------------------+------------+------------+------------+------------+

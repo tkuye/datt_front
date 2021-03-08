@@ -1,0 +1,204 @@
+@use 'navigation';
+$max-width: 1000px;
+#header {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin: 0 auto;
+  //max-width: 1200px;
+
+  .carousel-provider {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    max-height: 605px;
+    margin: 0 auto;
+
+    #layout {
+      position: absolute;
+
+      z-index: 1000;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      height: 100%;
+    }
+    .back,
+    .next {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      svg {
+        height: 40px;
+        width: 50px;
+        fill: white;
+      }
+    }
+    .next {
+      right: 0;
+      top: 50%;
+      z-index: 1000000;
+    }
+    .back {
+      left: 0;
+      top: 50%;
+      z-index: 1000000;
+    }
+  }
+  h1 {
+    position: relative;
+
+    color: rgb(224, 224, 224);
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    z-index: 100000;
+    text-align: center;
+
+    button {
+      font-size: calc(4vw + 30px);
+
+      height: fit-content;
+      font-family: navigation.$font-import, cursive;
+      font-weight:bolder;
+
+      background-color: navigation.$blue-logo;
+      color: #fff;
+      outline: none;
+      border: none;
+      padding: 10px;
+      padding-top: 3%;
+      margin-top: calc(-2% + 1px);
+      opacity: .8;
+      width: 100%;
+    }
+  }
+
+  .slider {
+    box-shadow: 0 5px 10px rgb(133, 133, 133);
+  }
+
+  img.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 600px;
+    margin: 0 auto;
+  }
+
+  #main {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $max-width;
+    margin-bottom: 40px;
+    h3 {
+      width: 100%;
+      margin: 0 auto;
+
+      margin-top: 10px;
+      text-align: center;
+      font-size: calc(23px + 0.3vw);
+      font-family: "Lato";
+      color: rgb(105, 105, 105);
+    }
+
+    
+
+    h2 {
+      color: rgb(49, 49, 49);
+      font-family: "Lato";
+      font-size: calc(45px + 0.2vw);
+     
+      width: fit-content;
+      text-align: center;
+
+      margin: auto;
+      margin-top: 30px;
+    }
+  }
+
+  #mission-div {
+    margin-top:80px;
+    h3 {
+      
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 10px;
+      text-align: center;
+      font-size: calc(23px + 0.3vw);
+      font-family: "Lato";
+      color: rgb(255, 255, 255);
+    }
+
+    
+
+    h2 {
+      color: rgb(255, 255, 255);
+      font-family: "Lato";
+      font-size: calc(45px + 0.2vw);
+      width: 80%;
+      
+      text-align: center;
+
+      margin: auto;
+      
+    }
+  
+
+    background-color:adjust-color(navigation.$blue-logo, $hue: 11, $saturation: 5%, $lightness: 9%, $alpha: 1.0);
+    padding:50px 0px;
+  }
+  #main-quote {
+    
+    width: 100%;
+     
+    padding: 50px 0px 50px 0px;
+
+    background-color: rgb(92, 157, 177);
+    h3 {
+      font-family: "Lato";
+      margin: auto;
+
+      text-align: center;
+    }
+    h3#quote {
+      font-style: italic;
+      padding-bottom: 5px;
+      margin: 0px 10px;
+      font-size: 20px;
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+
+@media only screen and (max-width:500px) {
+  #header {
+
+    #main-quote {
+      h3#quote {
+        font-size: 19px;
+        margin: 0px 10px;
+      }
+
+     
+
+    }
+
+    #mission-div {
+
+      h3 {
+        font-size:19px;
+      }
+      h2 {
+        font-size:31px;
+
+      }
+    }
+    
+  }
+}

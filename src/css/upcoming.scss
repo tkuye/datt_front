@@ -1,0 +1,47 @@
+@use 'navigation';
+
+#upcoming {
+    padding-top:50px;
+  
+    h1#head-upcoming {
+        font-family: "Lato";
+        font-size:39px;
+        color:rgb(83, 83, 83);
+        padding-bottom: 0px;
+        
+        width:50%;
+    }
+
+    .upcoming-events {
+        h1 {
+            font-family: "Lato";
+            color:rgb(83, 83, 83);
+        }
+        margin-top:30px;
+        img {
+            width: 50%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 400px;
+        }
+    }
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width:500px) {
+
+    #upcoming {
+        h1#head-upcoming {
+            font-size: 32px;
+
+
+        }
+        
+        h3 {
+            margin:0px 15px; 
+        }
+
+    }
+
+
+}

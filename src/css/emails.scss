@@ -1,0 +1,64 @@
+@use 'navigation';
+
+#emails {
+    width: 100%;
+    margin:0 auto;
+    margin-top:50px;
+    text-align:center;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    color:rgb(61, 61, 61);
+    margin-bottom: 30px;
+    input[type="email"] {
+        width: 60%;
+        height: 20px;
+        outline: none;
+        border: 1px solid rgb(170, 170, 170);
+        border-radius: 10px;
+        padding: 12px;
+        font-size: 18px;
+        max-width: 400px;
+        font-family: "Lato", Arial, Helvetica, sans-serif;
+        margin-bottom: 10px;
+      }
+      
+      input[type="submit"] {
+        width: 20%;
+        height: 40px;
+        margin-left: 15px;
+        font-size: 18px;
+        max-width: 100px;
+        border: 1px solid rgb(219, 219, 219);
+        border-radius: 10px;
+        background-color: navigation.$blue-logo;
+        color: white;
+        font-family: "Lato", Arial, Helvetica, sans-serif;
+        outline: none;
+        cursor: pointer;
+      }
+      
+       input[type="submit"]:hover {
+        background-color:adjust-color($color: navigation.$blue-logo, $hue: 0, $saturation: -5%, $lightness: -5%, $alpha: 1.0);
+      }
+}
+
+@media only screen and (max-width:500px) {
+
+  #emails {
+
+    h2 {
+      font-size:20px;
+      margin: 10px 10px;
+    }
+    input[type="submit"] {
+      width: 85%;
+      max-width:none;
+      margin-left: 0;
+    }
+    input[type="email"]{
+      width:80%;
+    }
+
+  }
+  
+
+}
