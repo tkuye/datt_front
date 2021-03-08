@@ -11,7 +11,10 @@ import './css/emails.scss'
 import './css/team.scss'
 import './css/footer.scss'
 import './css/upcoming.scss'
+import './css/policy.scss'
 import Team from './Team'
+import Cookie from './Cookie'
+import Privacy from './Privacy'
 
 
 
@@ -238,6 +241,16 @@ const App = () =>  {
             <Route exact path="/contact">
             <Navigation />
                 <Contact />
+                <Footer />
+            </Route>
+            <Route path="/cookie-policy">
+            <Navigation />
+                <Cookie />
+                <Footer />
+            </Route>
+            <Route path="/privacy-policy">
+            <Navigation />
+                <Privacy />
                 <Footer />
             </Route>
             </CarouselContext.Provider>

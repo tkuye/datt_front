@@ -5,7 +5,7 @@ interface FooterProps {
 
 }
 
-const Footer: React.FC<FooterProps> = ({}) => {
+const Footer: React.FC<FooterProps> = () => {
         return (<div className="footer">
             <div className="contact-privacy"><ul>
                 <li><Link to="/contact" className="content-p">Contact Us</Link></li>
@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
                 </div>
             <div className="social" onClick={() => {window.location.href = 'https://www.instagram.com/just.like.datt/'}}><AiFillInstagram /></div>
             <div className="help">
-            <Link to="start-here" className="start-here">Cookie Policy</Link></div>
+            <Link to="/cookie-policy" className="start-here">Cookie Policy</Link></div>
         </div>);
 }
 export default Footer
