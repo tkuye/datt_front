@@ -94,7 +94,7 @@ const EditUser: React.FC<EditUserProps> = ({dname,ddescription, dlocation}) => {
         let id = getCookie('userid')
         
         if (!image && !video) {
-            axios.post('/user', {
+            axios.post('/api/v1/user', {
                 name:name, 
                 description:description, 
                 id:id, 
@@ -103,7 +103,7 @@ const EditUser: React.FC<EditUserProps> = ({dname,ddescription, dlocation}) => {
             })
         }
         else if (!image && video) {
-            axios.post('/user', {
+            axios.post('/api/v1/user', {
                 name:name, 
                 description:description, 
                 id:id, 
@@ -121,7 +121,7 @@ const EditUser: React.FC<EditUserProps> = ({dname,ddescription, dlocation}) => {
             })
         }
         else if (image && !video) {
-            axios.post('/user', {
+            axios.post('/api/v1/user', {
                 name:name, 
                 description:description, 
                 id:id, 
@@ -139,7 +139,7 @@ const EditUser: React.FC<EditUserProps> = ({dname,ddescription, dlocation}) => {
             })
         }
         else {
-        axios.post('/user', {
+        axios.post('/api/v1/user', {
             name:name, 
             description:description, 
             id:id, 

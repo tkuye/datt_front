@@ -98,7 +98,7 @@ const AdminPost: React.FC<AdminPostProps> = () => {
             console.log(text)
             let id = getCookie('userid')
 
-            axios.post('/post', {
+            axios.post('/api/v1/post', {
                 tblname:currentSelection,
                 title, 
                 type:fileType,

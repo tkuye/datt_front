@@ -16,7 +16,7 @@ const NewUser: React.FC<NewUserProps> = () => {
     const ourContext = useContext(RunningContext)
 
     const checkUsername = () => {
-        axios.post('/existing-user', {
+        axios.post('/api/v1/existing-user', {
             username: username
         }).then((response) => {
             if (response.data) {
@@ -82,7 +82,7 @@ const NewUser: React.FC<NewUserProps> = () => {
         e.preventDefault()
         if (!totalTrue || existing !== "" || password === "" || username === "" ) return
 
-        axios.post('/new-user', {
+        axios.post('/api/v1/new-user', {
             username: username,
             password: password
 

@@ -7,7 +7,7 @@ interface EmailListingProps {
 
 const EmailListing: React.FC<EmailListingProps> = ({}) => {
     const getEmailListing = () => {
-        axios.get('/emails').then(response => {
+        axios.get('/api/v1/emails').then(response => {
             let blob = new Blob([response.data], { type: 'text/plain'})
             let link = document.createElement('a') as HTMLAnchorElement
             link.href = window.URL.createObjectURL(blob)

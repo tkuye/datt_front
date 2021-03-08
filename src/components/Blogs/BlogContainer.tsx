@@ -4,7 +4,7 @@ import "../../css/blogs.scss"
 import {BlogContext} from '../../App'
 import {Route} from 'react-router-dom'
 import ShowBlog from './ShowBlog'
-import { relative } from 'path'
+
 interface BlogContainerProps {
 
 }

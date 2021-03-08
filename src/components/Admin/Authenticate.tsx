@@ -24,7 +24,7 @@ const Authenticate: React.FC<AuthenticateProps> = ({isUserAuthenticated}) => {
                 input.value = '';
             }
         })
-        axios.post('/', {
+        axios.post('/api/v1/', {
             username:username, 
             password:password,
         }).then(response => {

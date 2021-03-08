@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react'
-import axios from '../../axInstance'
+
 import Axios from 'axios'
-import ArrayMove from 'array-move'
+
 import {BlogContext, EventContext}  from '../../App'
 
 interface AdminGetterProps {
