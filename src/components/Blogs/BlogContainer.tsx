@@ -2,8 +2,9 @@ import React, {useEffect, useState, useContext} from 'react'
 import BlogPost from './BlogPost'
 import "../../css/blogs.scss"
 import {BlogContext} from '../../App'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import ShowBlog from './ShowBlog'
+import Error from '../Admin/Error'
 
 interface BlogContainerProps {
 
@@ -59,7 +60,7 @@ const BlogContainer: React.FC<BlogContainerProps> = () => {
         },[context])
         return (
         
-        <div >
+        <div ><Switch>
                 <Route exact path="/blogs">
         <h1 id="head-blog">Read Our Blogs</h1>
         <div id="blog-container">
@@ -68,9 +69,11 @@ const BlogContainer: React.FC<BlogContainerProps> = () => {
 
         </div> 
         </Route>
-        <Route path="/blogs/blog/:id">
+        <Route exact path="/blogs/blog/:id">
                 <ShowBlog data={blog}/>
         </Route>
+        <Route component={Error}/>
+        </Switch>
         </div>
         );
 }

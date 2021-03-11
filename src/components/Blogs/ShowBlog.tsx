@@ -12,12 +12,16 @@ const ShowBlog: React.FC<ShowBlogProps> = ({data}) => {
     const [dataUrl, setDataUrl] = useState<string | undefined>(data?.blog)
     const context = useContext(BlogContext)
     useEffect(() => {
+        
         let windowId = Number(document.location.href.split('/').slice(-1)[0])
         window.scrollTo(0, 0)
         let blogHeader = document.querySelector('a[href="/blogs"]')
         blogHeader?.classList.remove('active')
         if (context?.status === "LOADED") {
             let blog = context.blogs?.filter(blog => blog.blog_id === windowId)[0]
+            if (!blog){
+                context.set404(true)
+            }
             setState({
                 image:blog?.image,
                 title:blog?.blog_title, 

@@ -2,7 +2,7 @@ import React, {useState, useEffect, lazy, Suspense} from 'react'
 import axios from './axInstance'
 import Axios from 'axios'
 
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import createHistory from 'history/createBrowserHistory'
 import "./css/navigation.scss"
@@ -16,6 +16,8 @@ import Team from './Team'
 import Cookie from './Cookie'
 import Privacy from './Privacy'
 import Loader from './Loader'
+import Error from './components/Admin/Error'
+
 
 
 
@@ -46,7 +48,9 @@ interface AppProps {
 type ContextState = {
     status:"LOADING" | 'ERROR'
 } | {
-    status:"LOADED"; events?:{
+    status:"LOADED"; 
+    set404:(found:boolean) => void;
+    events?:{
         event_date: Date;
         event_id:number;
         event_name:string
@@ -63,6 +67,7 @@ type ContextState = {
         name:string;
         url:string;
         image:string
+        
     }[];
     users?:{
         description:string;
@@ -147,6 +152,12 @@ const App = () =>  {
     const [currentEvent, setCurrentEvent] = useState<EventInterface>({status:"LOADING"})
     const [upcomingEvents, setUpcomingEvents] = useState<EventUpcomingI>({status:"LOADING"});
     const [carousel, setCarousel] = useState<Carousel>({status:"LOADING"})
+    const [notFound, setNotFound] = useState(false)
+
+    const noFind = (found:boolean) => {
+        setNotFound(found)
+    
+    }
 
     useEffect(() => {
         
@@ -161,10 +172,10 @@ const App = () =>  {
             if (isMounted) {
                 Promise.all([
                     axios.get('/users').then((response) => {
-                        setUsers({status:"LOADED", users:response.data})
+                        setUsers({status:"LOADED", users:response.data, set404:noFind})
                     }),
                     axios.get('/blogs', { cancelToken:source.token}).then((response) => {
-                        setBlogs({status:"LOADED", blogs:response.data})
+                        setBlogs({status:"LOADED", blogs:response.data, set404:noFind})
                         
                     }),
                     axios.get('/carousel', { cancelToken:source.token}).then((res) => {
@@ -172,16 +183,22 @@ const App = () =>  {
         
                     }),
                     axios.get('/events', { cancelToken:source.token}).then((response) => {
-                        setEvents({status:"LOADED", events:response.data})
+                        setEvents({status:"LOADED", events:response.data, set404:noFind})
                         setUpcomingEvents({status:"LOADED", events:response.data.filter((event:eventI) => event.upcoming === true)})
                         if (window.location.href.includes("events")) {
                             let eventName = window.location.href.split('/').slice(-1)[0]
                         
                             let event:eventI = response.data.filter((event:eventI) => event.event_name.split(" ").join("-").toLowerCase() === eventName
                             )[0]
-                            Axios.get(event.url).then((response) => {
-                                setCurrentEvent({status:"LOADED", event:event, urlData:response.data})
-                            })
+                            if (!event){
+                                setNotFound(true)
+                            }
+                            else {
+                                Axios.get(event.url).then((response) => {
+                                    setCurrentEvent({status:"LOADED", event:event, urlData:response.data})
+                                })
+                            }
+                            
                         
                            
                             
@@ -215,13 +232,14 @@ const App = () =>  {
     return (
         <div>
             <Suspense fallback={fallBack}>
-                {loaded?<Router>
+                {!notFound?<>{loaded?<Router>
                     <BlogContext.Provider value={blogs}>
                 <EventContext.Provider value={events} >
                 <UserContext.Provider value={users}>
                 <CurrentEventContext.Provider value={{getEvents}}>
                 <UpcomingContext.Provider value={upcomingEvents}>
                 <CarouselContext.Provider value={carousel}>
+                <Switch>
             <Route exact path="/">
             <Navigation />
             <Home />
@@ -267,13 +285,15 @@ const App = () =>  {
                 <Privacy />
                 <Footer />
             </Route>
+            <Route path="*" component={Error}/>
+            </Switch>
             </CarouselContext.Provider>
             </UpcomingContext.Provider>
             </CurrentEventContext.Provider>
             </UserContext.Provider>
             </EventContext.Provider>
             </BlogContext.Provider>
-            </Router>:<Loader />}
+            </Router>:<Loader />}</>:<Error />}
             </Suspense>
         </div>
 )};
