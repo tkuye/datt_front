@@ -29,7 +29,6 @@ const BlogPost: React.FC<BlogPostProps> = ({title, date, image, id, url, name, r
                         setPreview('')
                 }
                
-                console.log(res.data.split('.')[0])
                 setData(res.data)
         })
     

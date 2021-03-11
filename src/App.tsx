@@ -176,8 +176,7 @@ const App = () =>  {
                         setUpcomingEvents({status:"LOADED", events:response.data.filter((event:eventI) => event.upcoming === true)})
                         if (window.location.href.includes("events")) {
                             let eventName = window.location.href.split('/').slice(-1)[0]
-                            console.log(eventName)
-        
+                        
                             let event:eventI = response.data.filter((event:eventI) => event.event_name.split(" ").join("-").toLowerCase() === eventName
                             )[0]
                             Axios.get(event.url).then((response) => {
@@ -208,7 +207,6 @@ const App = () =>  {
 
 
     const getEvents = (data:eventI, urlData:string) => {
-        console.log(data)
         setCurrentEvent({status:"LOADED", event:data, urlData:urlData})
 
     }

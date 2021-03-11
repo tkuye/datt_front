@@ -57,7 +57,6 @@ function formatWords(words:string){
         let id = document.location.href.split('/').slice(-1).join('')
 
         axios.get('/blog', {params: {id}}).then(response => {
-            console.log(response.data)
             if (!data?.id){
                 setDatum({title:response.data.blog_title, details:response.data.blog_details, date:new Date(response.data.blog_date).toDateString(), id:response.data.blog_id,  url:response.data.url, name:response.data.name})
                

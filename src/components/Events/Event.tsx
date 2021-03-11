@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import {EventInterface, eventI} from '../../App'
-import Axios from 'axios'
 import "../../css/event.scss"
 import Emails from '../Emails'
 import Interest from './Interest'
@@ -15,7 +14,6 @@ const Event: React.FC<EventProps> = ({data}) => {
         useEffect(() => {
             if (data.status === "LOADED") {
                 setEvent(data.event)
-                console.log(data.event.int_total) 
 
                     setData(data.urlData!)
             }

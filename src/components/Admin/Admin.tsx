@@ -25,7 +25,7 @@ const Admin: React.FC<AdminProps> = () => {
     }
     useEffect(() => {
         checkUserAuth()
-        console.log(userAuth)
+        
     })
 
     const currentState = () => {

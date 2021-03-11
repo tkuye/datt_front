@@ -7,10 +7,9 @@ interface LogoHeadProps {
 
 }
 
-const LogoHead: React.FC<LogoHeadProps> = ({}) => {
+const LogoHead: React.FC<LogoHeadProps> = () => {
 
         useEffect(() => { 
-                console.log('New Render')
         })
         
         return (<Link to="/"><div id="image-container"><img id="logo" alt="Logo spelling D.A.T.T" src={logo} /></div></Link>);

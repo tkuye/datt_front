@@ -26,13 +26,13 @@ const AdminGetter: React.FC<AdminGetterProps> = ({item, getData}) => {
         getData(data, item)
       }
       const getItems = () => {
-          console.log(item)
+          
       if (clicked) return
           setDisplay('block')
        switch (item) {
            case 'events':
                if (eventContext?.status === "LOADED"){
-                   console.log(eventContext.events)
+                   
                    setData(eventContext.events?.map(event => {
                     let ourData = ""
 
@@ -58,7 +58,7 @@ const AdminGetter: React.FC<AdminGetterProps> = ({item, getData}) => {
                break
             case 'blogs':
                 if (blogContext?.status === "LOADED") {
-                    console.log(blogContext.blogs)
+                    
                    setData(blogContext.blogs?.map(blog => {
                             let ourData = ""
 

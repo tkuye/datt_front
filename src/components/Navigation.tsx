@@ -18,7 +18,6 @@ const Navigation: React.FC<NavigationProps> = () => {
     const [size, setSize] = useState<boolean | null>(null)
     useEffect( () => {
         
-        console.log(window.innerWidth)
         if (window.innerWidth > 768) {
             setSize(true)
             
@@ -41,7 +40,6 @@ const Navigation: React.FC<NavigationProps> = () => {
         svg.style.transition =  'all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1)'
         setState(false)
 
-        console.log('hee')
     }
 
     const svgChangeAgain = () => {

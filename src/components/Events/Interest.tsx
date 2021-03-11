@@ -31,7 +31,6 @@ const Interest: React.FC<InterestProps> = ({id}) => {
     
 
     useEffect(() => {
-        console.log(id)
         axios.get('/int-number', {params:{
             id
         }}).then(response => {
@@ -41,7 +40,6 @@ const Interest: React.FC<InterestProps> = ({id}) => {
         
         
        
-        console.log(intNumber)
         
         const eventExist = getCookie(`event-${id}`)
         if (eventExist !== "") {

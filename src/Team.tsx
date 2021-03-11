@@ -21,7 +21,6 @@ const Team: React.FC<TeamProps> = ({}) => {
     const context = useContext(UserContext)
     useEffect(() => {
         if (context?.status === "LOADED") {
-            console.log(context.users)
             setUsers(context.users)
             setImages(context.users?.map((user) => {return {image:user.image, name:user.name}}))
         }

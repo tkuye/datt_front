@@ -18,7 +18,7 @@ const UserAdmin: React.FC<UserAdminProps> = ({getUserEdit}) => {
 
             }).then(res => {
                 
-                console.log(res.data.url)
+               
                
                 
                 
