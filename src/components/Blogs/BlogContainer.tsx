@@ -40,6 +40,7 @@ const BlogContainer: React.FC<BlogContainerProps> = () => {
         const [blog, setBlog] = useState<{blog:string,image:string, title:string, date:string, blog_name:string} | undefined>(undefined)
         let context = useContext(BlogContext)
         
+
         const returnBlog = (data:string, image:string, title:string, date:string, blog_name:string) => {
                 
                 setBlog({blog: data, image: image, title: title, date:date, blog_name})
@@ -58,6 +59,8 @@ const BlogContainer: React.FC<BlogContainerProps> = () => {
                         }))
                 }
         },[context])
+
+        
         return (
         
         <div ><Switch>

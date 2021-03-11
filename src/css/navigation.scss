@@ -14,7 +14,7 @@ body, html {
     padding: 0;
     overflow-x: hidden !important;
     height:100%;
-    overflow-y: scroll;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
 #navigation {
@@ -205,7 +205,7 @@ position: relative;
     #event-nav-small {
         width:100px;
         margin-bottom: 30px;
-        
+        padding-bottom: 20px;
         
         #event-modal {
             position: absolute;

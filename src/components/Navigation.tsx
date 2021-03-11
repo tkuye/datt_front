@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import LogoHead from './LogoHead'
 import {MdKeyboardArrowDown} from 'react-icons/md'
 import EventModal from './EventModal'
-import {Link, NavLink}  from 'react-router-dom'
+import {Link, NavLink, useHistory, useLocation}  from 'react-router-dom'
 import { setTimeout } from 'timers'
 
 interface NavigationProps {
@@ -16,6 +16,8 @@ const Navigation: React.FC<NavigationProps> = () => {
     const [clicked, setClicked] = useState(false)
     const [display, setDisplay] = useState(1)
     const [size, setSize] = useState<boolean | null>(null)
+    const history = useHistory()
+    const location = useLocation()
     useEffect( () => {
         
         if (window.innerWidth > 768) {
@@ -111,15 +113,26 @@ const Navigation: React.FC<NavigationProps> = () => {
         
         
         
+        
     })
+
+    history.listen(() => {
+        if (!location.pathname.includes("blogs")){
+
+        }
+    })
+
+    const changeState = () => {
+        setState(true)
+    }
         return (<div>{size?<nav id="navigation">
                 
                 <Link to="/"><LogoHead /></Link>
             <ul id="nav-ul">
                 <li><h3 ><NavLink to="/our-team" activeStyle={{textDecoration:'none'}}>Our Team</NavLink></h3></li>
                 
-                <li id="event-nav" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events<MdKeyboardArrowDown /></h3>{state?<EventModal styling="none"/>:<EventModal styling="block"/>}</li>
-                <li><h3><NavLink to="/blogs" activeStyle={{textDecoration:'none'}}>Blogs</NavLink></h3></li>
+                <li id="event-nav" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events<MdKeyboardArrowDown /></h3>{state?<EventModal styling="none"/>:<EventModal changeState={changeState} styling="block"/>}</li>
+                <li><h3><NavLink isActive={(match, location) => { console.log(match);if (!match) {return false} else {return true}}} to="/blogs" activeStyle={{textDecoration:'none'}}>Blogs</NavLink></h3></li>
                 
             </ul>
         </nav>:<nav id="navigation-small">
@@ -128,7 +141,7 @@ const Navigation: React.FC<NavigationProps> = () => {
             <ul id="nav-ul-small" style={{opacity:display}}>
                 <li  id="our-team"><h3><NavLink to="/our-team" activeStyle={{textDecoration:'none'}}>Our Team</NavLink></h3></li>
                 <li id="blog-head"><h3><NavLink to="/blogs" activeStyle={{textDecoration:'none'}}>Blogs</NavLink></h3></li>
-                <li id="event-nav-small" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events<MdKeyboardArrowDown /></h3>{state?<EventModal styling="none"/>:<EventModal styling="block"/>}</li>
+                <li id="event-nav-small" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events<MdKeyboardArrowDown /></h3>{state?<EventModal styling="none"/>:<EventModal styling="block" changeState={changeState}/>}</li>
                 
                 
                
