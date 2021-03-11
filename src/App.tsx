@@ -15,6 +15,7 @@ import './css/policy.scss'
 import Team from './Team'
 import Cookie from './Cookie'
 import Privacy from './Privacy'
+import Loader from './Loader'
 
 
 
@@ -142,7 +143,7 @@ const App = () =>  {
     const [blogs, setBlogs] = useState<ContextState>({status:"LOADING"})
     const [events, setEvents] = useState<ContextState>({status:"LOADING"})
     const [users, setUsers] = useState<ContextState>({status:"LOADING"})
-
+    const [loaded, setLoaded] = useState<boolean>(false)
     const [currentEvent, setCurrentEvent] = useState<EventInterface>({status:"LOADING"})
     const [upcomingEvents, setUpcomingEvents] = useState<EventUpcomingI>({status:"LOADING"});
     const [carousel, setCarousel] = useState<Carousel>({status:"LOADING"})
@@ -155,53 +156,68 @@ const App = () =>  {
         
         let isMounted = true
         let source = Axios.CancelToken.source()
-        if (isMounted) {
-            axios.get('/users').then((response) => {
-                setUsers({status:"LOADED", users:response.data})
-            })
-            axios.get('/blogs', { cancelToken:source.token}).then((response) => {
-                            setBlogs({status:"LOADED", blogs:response.data})
-                            
-                        })
-            axios.get('/carousel', { cancelToken:source.token}).then((res) => {
-                setCarousel({status:"LOADED", images:res.data})
 
-            })
-
-            axios.get('/events', { cancelToken:source.token}).then((response) => {
-                setEvents({status:"LOADED", events:response.data})
-                setUpcomingEvents({status:"LOADED", events:response.data.filter((event:eventI) => event.upcoming === true)})
-                if (window.location.href.includes("events")) {
-                    let eventName = window.location.href.split('/').slice(-1)[0]
-                    console.log(eventName)
-
-                    let event:eventI = response.data.filter((event:eventI) => event.event_name.split(" ").join("-").toLowerCase() === eventName
-                    )[0]
-                    Axios.get(event.url).then((response) => {
-                        setCurrentEvent({status:"LOADED", event:event, urlData:response.data})
-                    })
-                
-                   
-                    
-
-                }
+       
+            if (isMounted) {
+                Promise.all([
+                    axios.get('/users').then((response) => {
+                        setUsers({status:"LOADED", users:response.data})
+                    }),
+                    axios.get('/blogs', { cancelToken:source.token}).then((response) => {
+                        setBlogs({status:"LOADED", blogs:response.data})
+                        
+                    }),
+                    axios.get('/carousel', { cancelToken:source.token}).then((res) => {
+                        setCarousel({status:"LOADED", images:res.data})
         
-        })
+                    }),
+                    axios.get('/events', { cancelToken:source.token}).then((response) => {
+                        setEvents({status:"LOADED", events:response.data})
+                        setUpcomingEvents({status:"LOADED", events:response.data.filter((event:eventI) => event.upcoming === true)})
+                        if (window.location.href.includes("events")) {
+                            let eventName = window.location.href.split('/').slice(-1)[0]
+                            console.log(eventName)
+        
+                            let event:eventI = response.data.filter((event:eventI) => event.event_name.split(" ").join("-").toLowerCase() === eventName
+                            )[0]
+                            Axios.get(event.url).then((response) => {
+                                setCurrentEvent({status:"LOADED", event:event, urlData:response.data})
+                            })
+                        
+                           
+                            
+        
+                        }
+                    
+                })
+
+                ]).then(
+                    () => setLoaded(true)
+                )
+                
+                
+                
+       
         return () => {
+            
                 isMounted = false
                 source.cancel()
         }
 
 }},[])
+
+
     const getEvents = (data:eventI, urlData:string) => {
         console.log(data)
         setCurrentEvent({status:"LOADED", event:data, urlData:urlData})
 
     }
+
+
     return (
         <div>
             <Suspense fallback={fallBack}>
-                <Router>
+                {loaded?<Router>
                     <BlogContext.Provider value={blogs}>
                 <EventContext.Provider value={events} >
                 <UserContext.Provider value={users}>
@@ -259,7 +275,7 @@ const App = () =>  {
             </UserContext.Provider>
             </EventContext.Provider>
             </BlogContext.Provider>
-            </Router>
+            </Router>:<Loader />}
             </Suspense>
         </div>
 )};
