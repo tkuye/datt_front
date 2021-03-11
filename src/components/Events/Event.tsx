@@ -12,6 +12,7 @@ const Event: React.FC<EventProps> = ({data}) => {
     const [event, setEvent] = useState<eventI | null>(null)
     const [getData, setData] = useState<string>("")
         useEffect(() => {
+            window.scrollTo(0, 0)
             if (data.status === "LOADED") {
                 setEvent(data.event)
 
