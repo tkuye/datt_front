@@ -14,7 +14,7 @@ const ShowBlog: React.FC<ShowBlogProps> = ({data}) => {
     useEffect(() => {
         
         let windowId = Number(document.location.href.split('/').slice(-1)[0])
-        window.scrollTo(0, 0)
+        document.body.scrollTop = 0
         let blogHeader = document.querySelector('a[href="/blogs"]')
         blogHeader?.classList.remove('active')
         if (context?.status === "LOADED") {
