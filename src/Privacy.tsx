@@ -177,7 +177,7 @@ const Privacy: React.FC<PrivacyProps> = () => {
 <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
 <h1>Contact Us</h1>
 <p>If you have any questions about this Privacy Policy, You can contact us:</p>
-<p>By visiting this link: <Link to="https://www.justlikedatt.com/contact">Contact</Link></p>
+<p>By visiting this link: <Link to="/contact" style={{color:"black"}}>Contact</Link></p>
         </div>);
 }
 export default Privacy
