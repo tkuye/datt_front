@@ -12,8 +12,8 @@ $blue-adjusted:adjust-color($blue-logo, $hue: 0, $saturation: 30%, $lightness: -
 body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    min-height: 100vh;
+    overflow-x: hidden !important;
+    height:100%;
     
 }
 
@@ -26,6 +26,7 @@ body, html {
         display: flex!important;
         flex-direction: row !important;
         transition:none !important;
+        padding:0;
         #event-modal {
             position: absolute;
             top:65px;
@@ -76,7 +77,7 @@ body, html {
     
     #logo {
         width: 120px;
-        position: absolute;
+        position: absolute ;
         top: -15px;
         left: -20px;
         z-index: 100000000;
@@ -92,7 +93,7 @@ padding-bottom: 27px;
 #hamburger {
     display: block;
     position:absolute;
-    right:25px;
+    right:8%;
     top:30px;
     cursor: pointer;
     z-index: 10000000000000000 !important;
@@ -174,37 +175,37 @@ ul#nav-ul, ul#nav-ul-small {
 
 
 #navigation-small {
-
-
+padding-bottom: 50px;
+position: relative;
 
 #nav-ul-small {
-    flex-direction: column !important;;
-    margin-top: 100px !important;
-    
-    
+    flex-direction: column !important;
+    margin: 0 auto;
+    margin-top: 80px !important;
+    width: 90%;
+    height:fit-content;
+    padding: 0px !important;
     svg {
         position: absolute;
-        top:88px;
+        top:148px;
         left: 118px;
         fill:$blue-logo;
     }
 
-    #blog-head {
-        justify-content:flex-end;
-        display: flex;
-        margin-right: 70px;
-        margin-top:-174px;
-        width:75px;
-        position: absolute;
-        right: 20px;
+    
+    
+    h3, li {
+        width: fit-content;
     }
-
+    li {
+        padding-left: 40px;
+    }
+    
     #event-nav-small {
         width:100px;
-        //justify-content:flex-end;
-        min-height:150px;
-        //display: flex;
-        margin-right: 100px;
+        margin-bottom: 30px;
+        
+        
         #event-modal {
             position: absolute;
             margin-top: 55px;

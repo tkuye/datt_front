@@ -118,7 +118,7 @@ const Navigation: React.FC<NavigationProps> = () => {
                 
                 <Link to="/"><LogoHead /></Link>
             <ul id="nav-ul">
-                <li ><h3><NavLink to="/our-team" activeStyle={{textDecoration:'none'}}>Our Team</NavLink></h3></li>
+                <li><h3 ><NavLink to="/our-team" activeStyle={{textDecoration:'none'}}>Our Team</NavLink></h3></li>
                 
                 <li id="event-nav" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events<MdKeyboardArrowDown /></h3>{state?<EventModal styling="none"/>:<EventModal styling="block"/>}</li>
                 <li><h3><NavLink to="/blogs" activeStyle={{textDecoration:'none'}}>Blogs</NavLink></h3></li>
@@ -128,9 +128,10 @@ const Navigation: React.FC<NavigationProps> = () => {
                 
                 <Link to="/"><LogoHead /></Link>
             <ul id="nav-ul-small" style={{opacity:display}}>
-                <li ><h3><NavLink to="/our-team" activeStyle={{textDecoration:'none'}}>Our Team</NavLink></h3></li>
-                <li id="event-nav-small" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events<MdKeyboardArrowDown /></h3>{state?<EventModal styling="none"/>:<EventModal styling="block"/>}</li>
+                <li  id="our-team"><h3><NavLink to="/our-team" activeStyle={{textDecoration:'none'}}>Our Team</NavLink></h3></li>
                 <li id="blog-head"><h3><NavLink to="/blogs" activeStyle={{textDecoration:'none'}}>Blogs</NavLink></h3></li>
+                <li id="event-nav-small" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events<MdKeyboardArrowDown /></h3>{state?<EventModal styling="none"/>:<EventModal styling="block"/>}</li>
+                
                 
                
                 

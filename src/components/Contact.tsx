@@ -52,7 +52,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
                 <h2>Your Email Address</h2>
                 <input type="email" name="contact-email" value={email} id="contact-email" onChange={(e) => setEmail(e.target.value)}/>
                 <h2>What do you need help with?</h2>
-                <TextareaAutosize  minRows={5} autoFocus id="contact-area" value={text} style={{padding:"10px", resize:"none"}}
+                <TextareaAutosize  minRows={5} autoFocus id="contact-area" value={text} style={{ resize:"none"}}
                 onChange={e => setText(e.target.value)}/>
                 <input type="submit" value="Send" id="contact-send" />
                 <h3 style={{textAlign:"center"}}>{show}</h3>
