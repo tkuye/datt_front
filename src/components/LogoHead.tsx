@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import logo from '../images/Datt-removebg-preview.png'
+import logo from '../images/Copy_of_Datt-removebg-preview.png'
 
 import {Link} from 'react-router-dom'
 
