@@ -11,7 +11,7 @@ interface FullBlogProps {
 const FullBlog: React.FC<FullBlogProps> = ({data}) => {
     const [pars, setPars] = useState<any>([])
     const [datum, setDatum] = useState(data)
-    const [callAgain, setCallAgain] = useState(0)
+    
 
     function formatString(string:string) {
         

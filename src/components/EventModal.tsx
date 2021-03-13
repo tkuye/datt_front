@@ -36,13 +36,14 @@ const EventModal: React.FC<EventModalProps> = ({styling, changeState}) => {
             Axios.get(event.url).then((response) => {
                     data = response.data
             })  
-            const goToEvent = () => {
-                
+            const goToEvent = (e:any) => {
+                e.stopPropagation();
                 eventContext?.getEvents(event, data)
             }
-            return <Link
+            return <Link 
+
             to={`/events/${event.event_name.split(" ").join("-").toLowerCase()}`} 
-            style={{textDecoration:"none", color:"#404040"}} onClick={goToEvent} onTouchEnd={goToEvent}>
+            style={{textDecoration:"none", color:"#404040"}} onClick={(e) => goToEvent(e)} onTouchEnd={goToEvent}>
                 <p className="modal-event">{event.event_name}</p>
                 </Link>
         })}</div>);

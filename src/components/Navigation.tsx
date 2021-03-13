@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import LogoHead from './LogoHead'
 import {MdKeyboardArrowDown} from 'react-icons/md'
 import EventModal from './EventModal'
@@ -17,6 +17,7 @@ const Navigation: React.FC<NavigationProps> = () => {
     const [display, setDisplay] = useState(1)
     const [size, setSize] = useState<boolean | null>(null)
     const [active, setActive] = useState(false)
+    const blogRef =  useRef()
     const history = useHistory()
     const location = useLocation()
     useEffect( () => {
@@ -117,14 +118,7 @@ const Navigation: React.FC<NavigationProps> = () => {
         
     })
 
-    history.listen((path) => {
-        if (path.pathname.includes("blogs")){
-            
-            setActive(true);
-        }else{
-            setActive(false);
-        }
-    })
+   
 
     const changeState = () => {
         setState(true)
@@ -136,7 +130,8 @@ const Navigation: React.FC<NavigationProps> = () => {
                 <li><h3 ><NavLink to="/our-team" activeStyle={{textDecoration:'none'}}>Our Team</NavLink></h3></li>
                 
                 <li id="event-nav" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events<MdKeyboardArrowDown /></h3>{state?<EventModal styling="none"/>:<EventModal changeState={changeState} styling="block"/>}</li>
-                <li><h3><Link className={active?"active":""} to="/blogs" >Blogs</Link></h3></li>
+                <li><h3><NavLink to="/blogs" >Blogs</NavLink></h3></li>
+                
                 
             </ul>
         </nav>:<nav id="navigation-small">
@@ -144,7 +139,7 @@ const Navigation: React.FC<NavigationProps> = () => {
                 <Link to="/"><LogoHead /></Link>
             <ul id="nav-ul-small" style={{opacity:display}}>
                 <li  id="our-team"><h3><NavLink to="/our-team" activeStyle={{textDecoration:'none'}}>Our Team</NavLink></h3></li>
-                <li id="blog-head"><h3><Link className={active?"active":""}  to="/blogs" >Blogs</Link></h3></li>
+                <li id="blog-head" ><h3><NavLink to="/blogs" >Blogs</NavLink></h3></li>
                 <li id="event-nav-small" onMouseEnter={svgChange} onTouchStart={svgChange} onMouseLeave={svgChangeAgain}><h3>Events</h3>{state?<EventModal styling="none"/>:<EventModal styling="block" changeState={changeState}/>}</li>
                 
             </ul>

@@ -15,8 +15,7 @@ const ShowBlog: React.FC<ShowBlogProps> = ({data}) => {
         
         let windowId = Number(document.location.href.split('/').slice(-1)[0])
         document.body.scrollTop = 0
-        let blogHeader = document.querySelector('a[href="/blogs"]')
-        blogHeader?.classList.remove('active')
+        
         if (context?.status === "LOADED") {
             let blog = context.blogs?.filter(blog => blog.blog_id === windowId)[0]
             if (!blog){
@@ -33,7 +32,7 @@ const ShowBlog: React.FC<ShowBlogProps> = ({data}) => {
             })
         }
         return () => {
-            blogHeader?.classList.add('active')
+            
         }
     }, [context])
         return (
