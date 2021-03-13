@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 
 
@@ -7,6 +7,9 @@ interface PrivacyProps {
 }
 
 const Privacy: React.FC<PrivacyProps> = () => {
+        useEffect(() => {
+                document.body.scrollTop = 0
+        })
         return (<div className="policy">
             <h1>Privacy Policy</h1>
 <p>Last updated: March 06, 2021</p>

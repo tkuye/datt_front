@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 interface CookieProps {
 
 }
 
 const Cookie: React.FC<CookieProps> = () => {
+    useEffect(() => {
+        document.body.scrollTop = 0
+})
         return (<div className="policy">
             <h1>Cookie Policy</h1>
 
