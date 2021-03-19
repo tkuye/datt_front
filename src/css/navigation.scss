@@ -37,7 +37,7 @@ body, html {
             background-color: $back-color;
             z-index:100000000000 !important;
             background-position: 0px;
-            -webkit-background-clip: none;
+            
             -webkit-text-fill-color:#808080;
             cursor:default;
             background-image: none;
@@ -117,12 +117,20 @@ ul#nav-ul, ul#nav-ul-small {
     top: -19px;
     padding-bottom: 20px;
 
-    
+    a {
+        color: $blue-logo;
+    }
+    a:hover, li:hover {
+        color: $orange-logo;
+        transition: all ease 0.3s;
+    }
     li {
         font-size:21px;
         cursor: pointer;
         font-family: $font-import;
-        -webkit-background-clip: text;
+        color: $blue-logo;
+        transition: all ease 0.3s;
+       /* -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
          background-image: linear-gradient(
     	to right,
@@ -130,7 +138,8 @@ ul#nav-ul, ul#nav-ul-small {
 	    $orange-logo 50%,
 	    $blue-logo 50%);
 	    background-size: 200% 100%;
-	    background-position: 100%;
+	    background-position: 100%;*/
+
         text-decoration: none;
 
         
